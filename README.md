@@ -133,7 +133,7 @@ Replace **MIT** and **OpsStation** with the appropriate license and your informa
 
 | Name | Version |
 |------|--------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 2.90.0 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >=2.90.0 |
 
 ## Modules
 
