@@ -1,6 +1,5 @@
 data "azurerm_client_config" "current_client_config" {}
 
-
 module "labels" {
   source      = "git::https://github.com/opsstation/terraform-azure-labels.git?ref=v1.0.0"
   name        = var.name
