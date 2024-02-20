@@ -3,8 +3,8 @@ provider "azurerm" {
 }
 
 locals {
-  name        = "test"
-  environment = "app"
+  name        = "testiiii"
+  environment = "app11"
   label_order = ["name", "environment"]
 }
 
@@ -93,7 +93,7 @@ module "vault" {
   depends_on = [module.resource_group, module.vnet]
   access_policy = [
     {
-      object_id = "77xxxx-0x-xx-axx-xxxx193"
+      object_id = "asedfcvgrt-sdefr-xxxx-azxd-sdfrvbhyuk"
       key_permissions = [
         "Get",
         "List",

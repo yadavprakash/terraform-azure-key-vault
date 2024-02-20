@@ -3,7 +3,7 @@ provider "azurerm" {
 }
 
 locals {
-  name        = "test"
+  name        = "teskkijut"
   environment = "app"
   label_order = ["name", "environment"]
 }
@@ -38,12 +38,12 @@ module "vnet" {
 ## Subnet to which network security group will be attached.
 ##-----------------------------------------------------------------------------
 module "subnet" {
-  source               = "git::https://github.com/opsstation/terraform-azure-subnet.git?ref=v1.0.0"
+  source               = "git::https://github.com/opsstation/terraform-azure-subnet.git?ref=v1.0.1"
   name                 = local.name
   environment          = local.environment
   resource_group_name  = module.resource_group.resource_group_name
   location             = module.resource_group.resource_group_location
-  virtual_network_name = join("", module.vnet.vnet_name)
+  virtual_network_name = join("", module.vnet[*].vnet_name)
   # Subnet Configuration
   subnet_names    = ["subnet"]
   subnet_prefixes = ["10.30.0.0/24"]
@@ -84,11 +84,11 @@ module "vault" {
   name                        = local.name
   environment                 = local.environment
   sku_name                    = "standard"
-  principal_id                = ["7712b174-0f84-4a4c-a8e9-5fccfe394193"]
+  principal_id                = ["cfderf452-0f84-2145-2548-21458"]
   role_definition_name        = ["Key Vault Administrator"]
   resource_group_name         = module.resource_group.resource_group_name
   subnet_id                   = module.subnet.subnet_id[0]
-  virtual_network_id          = module.vnet.vnet_id[0]
+  virtual_network_id          = module.vnet.vnet_id
   enable_private_endpoint     = true
   enable_rbac_authorization   = true
   purge_protection_enabled    = false

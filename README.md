@@ -56,7 +56,7 @@ module "vault" {
   enabled_for_disk_encryption = true
   sku_name                    = "standard"
   subnet_id                   = module.subnet.default_subnet_id
-  virtual_network_id          = module.vnet.id
+  virtual_network_id          = module.vnet.vnet_id
   enable_private_endpoint     = true
 
   depends_on                  = [module.resource_group, module.vnet]
