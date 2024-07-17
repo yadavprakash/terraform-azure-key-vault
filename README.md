@@ -25,7 +25,7 @@ for creating AZURE resources, and you can customize the inputs as needed. Below 
 
 ```hcl
 module "vault" {
-  source                      =  "git::https://github.com/opsstation/terraform-azure-key-vault.git?ref=v1.0.0"
+  source                      =  "git::https://github.com/yadavprakash/terraform-azure-key-vault.git?ref=v1.0.0"
   name                        = "app"
   environment                 = "test"
   sku_name                    = "standard"
@@ -48,7 +48,7 @@ module "vault" {
 
 ```hcl
 module "vault" {
-  source                      =  "git::https://github.com/opsstation/terraform-azure-key-vault.git?ref=v1.0.0"
+  source                      =  "git::https://github.com/yadavprakash/terraform-azure-key-vault.git?ref=v1.0.0"
   name                        = "app"
   environment                 = "test"
   resource_group_name         = module.resource_group.resource_group_name
@@ -111,14 +111,14 @@ module "vault" {
 This example demonstrates how to create various AZURE resources using the provided modules. Adjust the input values to suit your specific requirements.
 
 ## Examples
-For detailed examples on how to use this module, please refer to the [examples](https://github.com/opsstation/terraform-azure-key-vault/blob/master/_example) directory within this repository.
+For detailed examples on how to use this module, please refer to the [examples](https://github.com/yadavprakash/terraform-azure-key-vault/blob/master/_example) directory within this repository.
 
 ## License
-This Terraform module is provided under the **MIT** License. Please see the [LICENSE](https://github.com/opsstation/terraform-azure-key-vault/blob/master/LICENSE) file for more details.
+This Terraform module is provided under the **MIT** License. Please see the [LICENSE](https://github.com/yadavprakash/terraform-azure-key-vault/blob/master/LICENSE) file for more details.
 
 ## Author
 Your Name
-Replace **MIT** and **OpsStation** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
+Replace **MIT** and **yadavprakash** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 
 <!-- BEGIN_TF_DOCS -->
@@ -139,7 +139,7 @@ Replace **MIT** and **OpsStation** with the appropriate license and your informa
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/opsstation/terraform-azure-labels.git | v1.0.0 |
+| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/yadavprakash/terraform-azure-labels.git | v1.0.0 |
 
 ## Resources
 
@@ -177,7 +177,7 @@ Replace **MIT** and **OpsStation** with the appropriate license and your informa
 | <a name="input_key_enabled"></a> [key\_enabled](#input\_key\_enabled) | Flag to control creation of key vault key resource. | `bool` | `false` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. sequence of application name and environment `name`,`environment`,'attribute' [`webserver`,`qa`,`devops`,`public`,] . | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
 | <a name="input_location"></a> [location](#input\_location) | n/a | `string` | `"Canada Central"` | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'opsstation'. | `string` | `""` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'yadavprakash'. | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |
 | <a name="input_network_acls_bypass"></a> [network\_acls\_bypass](#input\_network\_acls\_bypass) | Specifies which traffic can bypass the network rules. Possible values are AzureServices and None. | `string` | `null` | no |
 | <a name="input_network_acls_default_action"></a> [network\_acls\_default\_action](#input\_network\_acls\_default\_action) | The Default Action to use when no rules match from ip\_rules / virtual\_network\_subnet\_ids. Possible values are Allow and Deny. | `string` | `"Deny"` | no |
