@@ -25,7 +25,7 @@ for creating AZURE resources, and you can customize the inputs as needed. Below 
 
 ```hcl
 module "vault" {
-  source                      =  "git::https://github.com/yadavprakash/terraform-azure-key-vault.git?ref=v1.0.0"
+  source                      =  "git::https://github.com/yadavprakash/terraform-azure-key-vault.git"
   name                        = "app"
   environment                 = "test"
   sku_name                    = "standard"
@@ -48,7 +48,7 @@ module "vault" {
 
 ```hcl
 module "vault" {
-  source                      =  "git::https://github.com/yadavprakash/terraform-azure-key-vault.git?ref=v1.0.0"
+  source                      =  "git::https://github.com/yadavprakash/terraform-azure-key-vault.git"
   name                        = "app"
   environment                 = "test"
   resource_group_name         = module.resource_group.resource_group_name
